@@ -46,7 +46,7 @@ h1 {
 }
 
 p {
-  font-family: "Noto Sans";
+  font-family: var(--body-font);
   font-size: 3vw;
 
   color: #ffb181;
