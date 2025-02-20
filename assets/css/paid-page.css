@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: linear-gradient(to right, #deff78, #8cd003);
+}
+.kiosk-header {
+  width: 100vw;
+  height: 30vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-container {
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.logo {
+  height: 100%;
+  width: auto;
+  object-fit: contain;
+}
+.thanks-container {
+  display: flex;
+  width: 100%;
+  height: 10vh;
+
+  font-family: var(--header-font);
+  align-items: center;
+  justify-content: center;
+  font-size: 4rem;
+  color: var(--orange);
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+}
