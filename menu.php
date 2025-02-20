@@ -34,32 +34,34 @@
                 </li>
             </ul>
         </nav>
-        <div id="menu-items">
-            <div class="item-card">
-                <img src="assets/img/breakfast1.webp" alt="menu" class="item-image">
-                <p class="item-title">Item Title</p>
-                <p class="item-price">$9.99</p>
-            </div>
-            <div class="item-card">
-                <img src="assets/img/breakfast1.webp" alt="menu" class="item-image">
-                <p class="item-title">Item Title</p>
-                <p class="item-price">$9.99</p>
-            </div>
-            <div class="item-card">
-                <img src="assets/img/breakfast1.webp" alt="menu" class="item-image">
-                <p class="item-title">Item Title</p>
-                <p class="item-price">$9.99</p>
-            </div>
-            <div class="item-card">
-                <img src="assets/img/breakfast1.webp" alt="menu" class="item-image">
-                <p class="item-title">Item Title</p>
-                <p class="item-price">$9.99</p>
-            </div>
+    <!-- </div> -->
+    <div id="menu-items">
+        <div class="item-card">
+            <img src="assets/img/breakfast1.webp" alt="menu" class="item-image">
+            <p class="item-title">Item Title</p>
+            <p class="item-price">$9.99</p>
         </div>
+        <div class="item-card">
+            <img src="assets/img/breakfast1.webp" alt="menu" class="item-image">
+            <p class="item-title">Item Title</p>
+            <p class="item-price">$9.99</p>
+        </div>
+        <div class="item-card">
+            <img src="assets/img/breakfast1.webp" alt="menu" class="item-image">
+            <p class="item-title">Item Title</p>
+            <p class="item-price">$9.99</p>
+        </div>
+        <div class="item-card">
+            <img src="assets/img/breakfast1.webp" alt="menu" class="item-image">
+            <p class="item-title">Item Title</p>
+            <p class="item-price">$9.99</p>
+        </div>
+    </div>
     </div>
     <div id="footer">
         <div id="cart-container">
             <div id="cart-img">
+                <img src="assets/img/dips1.webp" alt="cart">
                 <p>##</p>
             </div>
             <p>Your total:</p>

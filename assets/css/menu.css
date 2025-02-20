@@ -165,7 +165,7 @@
     text-align: end;
  }
 
-/* footer
+/* MARK: footer
  */
  #cart-container {
     background-color: darkorchid;
@@ -176,9 +176,12 @@
     display: flex;
  }
 
- #cart-img {
-    background-color: fuchsia;
+ #cart-img img {
+    /* background-color: fuchsia; */
+    background-image: url("assets/img/dips1.webp");
+    background-size: cover;
 
     height: 150px;
     width: 150px;
  }
+ 
