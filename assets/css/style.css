@@ -1,20 +1,27 @@
 @font-face {
-    font-family: "Renos-Rough";
-    src: url("../fonts/renos-rough-webfont.woff2") format("woff2"),
-      url("../fonts/renos-rough-webfont.woff") format("woff"), url("../fonts/renos-rough.ttf") format("truetype");
-  }
+  font-family: "Renos-Rough";
+  src: url("../fonts/renos-rough-webfont.woff2") format("woff2"),
+    url("../fonts/renos-rough-webfont.woff") format("woff"), url("../fonts/renos-rough.ttf") format("truetype");
+}
 
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
 
-/* font-family: "Renos-Rough"; */
+/*  font-family: var(--header-font); */
 
+@font-face {
+  font-family: "Noto-Sans";
+  src: url("../fonts/NotoSans-VariableFont_wdth,wght.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+/*  font-family: var(--body-font); */
 :root {
-    --orange: #ff7520;
-    --light-orange: #ffb181;
-    --green: #8cd003;
-    --light-green: #deff78;
-    --dark-blue: #053631;
+  --orange: #ff7520;
+  --light-orange: #ffb181;
+  --green: #8cd003;
+  --light-green: #deff78;
+  --dark-blue: #053631;
 
-    --header-font: "Renos-Rough";
-    --body-font: "Noto Sans";
-  }
+  --header-font: "Renos-Rough";
+  --body-font: "Noto-Sans";
+}
