@@ -67,5 +67,6 @@ $filename = $result->fetch_assoc()['filename'];
 
 </body>
 <script src="assets/js/fade.js"></script>
+<script src="assets/js/press.js"></script>
 
 </html>
