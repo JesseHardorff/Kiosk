@@ -114,6 +114,11 @@ body {
   color: var(--orange);
   padding: 1vh 0;
 }
+
+.english img {
+  transform: translate(-25%,0);
+}
+
 .english,
 .dutch {
   height: 100%;
@@ -122,9 +127,9 @@ body {
   cursor: pointer;
   transition: transform 0.2s ease;
   border-radius: 50%;
-  border-color: black;
-  border: 4px solid black;
   aspect-ratio: 1/1;
+
+  overflow: hidden;
 }
 
 .choose-language {
@@ -136,4 +141,6 @@ body {
 .dutch:hover,
 .english:hover {
   transform: scale(1.1);
+
+  border: 8px solid gold;
 }

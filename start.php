@@ -39,10 +39,10 @@
     </div>
     <div class="language-container">
         <div class="english">
-            <img src="assets/img/uk.png" alt="Logo" class="choose-language">
+            <img src="assets/img/UK1.webp" alt="Logo" class="choose-language">
         </div>
         <div class="dutch">
-            <img src="assets/img/dutch.png" alt="Logo" class="choose-language">
+            <img src="assets/img/NL1.png" alt="Logo" class="choose-language">
         </div>
 
 
