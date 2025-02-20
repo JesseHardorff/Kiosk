@@ -65,7 +65,7 @@ p {
   align-items: center;
 
   border-radius: 50px;
-  opacity: 0.6;
+  opacity: 1;
 
   flex-direction: column;
   background-color: #deff78;

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 10, 2025 at 12:19 PM
+-- Generation Time: Feb 20, 2025 at 09:14 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -56,6 +56,41 @@ CREATE TABLE `images` (
   `filename` varchar(255) NOT NULL,
   `description` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `images`
+--
+
+INSERT INTO `images` (`image_id`, `filename`, `description`) VALUES
+(1, 'breakfast1.webp', ''),
+(2, 'breakfast2.webp', ''),
+(3, 'breakfast3.webp', ''),
+(4, 'lunch&dinner1.webp', ''),
+(5, 'lunch&dinner2.webp', ''),
+(6, 'lunch&dinner3.webp', ''),
+(7, 'sides1.webp', ''),
+(8, 'sides2.webp', ''),
+(9, 'sides3.webp', ''),
+(10, 'sides4.webp', ''),
+(11, 'snacks1.webp', ''),
+(12, 'snacks2.webp', ''),
+(13, 'snacks3.webp', ''),
+(14, 'snacks4.webp', ''),
+(15, 'snacks5.webp', ''),
+(16, 'snacks6.webp', ''),
+(17, 'snacks7.webp', ''),
+(18, 'dips1.webp', ''),
+(19, 'dips2.webp', ''),
+(20, 'dips3.webp', ''),
+(21, 'dips4.webp', ''),
+(22, 'dips5.webp', ''),
+(23, 'dips6.webp', ''),
+(24, 'dips7.webp', ''),
+(25, 'drinks1.webp', ''),
+(26, 'drinks2.webp', ''),
+(27, 'drinks3.webp', ''),
+(28, 'drinks4.webp', ''),
+(29, 'drinks5.webp', '');
 
 -- --------------------------------------------------------
 
@@ -198,8 +233,8 @@ ALTER TABLE `order_status`
 --
 ALTER TABLE `products`
   ADD PRIMARY KEY (`product_id`),
-  ADD KEY `image_relation` (`image_id`),
-  ADD KEY `category_id` (`category_id`);
+  ADD KEY `category_id` (`category_id`),
+  ADD KEY `image_id_relation` (`image_id`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -215,7 +250,7 @@ ALTER TABLE `categories`
 -- AUTO_INCREMENT for table `images`
 --
 ALTER TABLE `images`
-  MODIFY `image_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `image_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 
 --
 -- AUTO_INCREMENT for table `orders`
@@ -262,7 +297,8 @@ ALTER TABLE `order_product`
 -- Constraints for table `products`
 --
 ALTER TABLE `products`
-  ADD CONSTRAINT `categorie_relation` FOREIGN KEY (`category_id`) REFERENCES `categories` (`category_id`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `categorie_relation` FOREIGN KEY (`category_id`) REFERENCES `categories` (`category_id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `image_id_relation` FOREIGN KEY (`image_id`) REFERENCES `images` (`image_id`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
