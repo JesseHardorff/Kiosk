@@ -2,19 +2,19 @@
   margin: 0;
   padding: 0;
 }
-
+body {
+  background: linear-gradient(to right, #deff78, #8cd003);
+}
 .kiosk-header {
   width: 100vw;
   height: 30vh;
-  background-color: aquamarine;
+
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
 }
 
 .logo-container {
-  display: flex;
   align-items: center;
   justify-content: center;
   height: 100%;
@@ -29,28 +29,31 @@
   display: flex;
   width: 100%;
   height: 10vh;
-  background-color: blueviolet;
+
   font-family: var(--header-font);
   align-items: center;
   justify-content: center;
   font-size: 10rem;
+  color: var(--orange);
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
 }
 .order-here-container {
   display: flex;
   width: 100%;
   height: 10vh;
-  background-color: rgb(163, 129, 194);
+
   font-family: var(--body-font);
   align-items: center;
   justify-content: center;
   padding-top: 5vh;
   font-size: 8rem;
+  color: var(--orange);
 }
 .order-images-container {
   display: flex;
   width: 100%;
   height: 20vh;
-  background-color: rgb(166, 196, 59);
+
   align-items: center;
   justify-content: center;
   font-family: var(--header-font);
@@ -62,15 +65,75 @@
 .take-out-image {
   width: 35%;
   height: 100%;
-  background-color: rgb(195, 195, 195);
+
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-weight: 900;
+  background-color: var(--light-green);
+  border-radius: 20px;
+  border-color: black;
+  border: 2px solid black;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.dine-in-image:hover,
+.take-out-image:hover {
+  transform: scale(1.05);
 }
 .choose-logo {
   width: 80%;
   height: auto;
   object-fit: contain;
+}
+.language-text {
+  display: flex;
+  width: 100%;
+  height: 2vh;
+
+  font-family: var(--body-font);
+  align-items: center;
+  justify-content: center;
+  padding-top: 4vh;
+  padding-bottom: 1vh;
+  font-size: 5rem;
+  color: var(--orange);
+}
+.language-container {
+  display: flex;
+  width: 100%;
+  height: 10vh;
+
+  font-family: var(--body-font);
+  align-items: center;
+  justify-content: center;
+  gap: 5rem;
+  font-size: 5rem;
+  color: var(--orange);
+  padding: 1vh 0;
+}
+.english,
+.dutch {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  border-radius: 50%;
+  border-color: black;
+  border: 4px solid black;
+  aspect-ratio: 1/1;
+}
+
+.choose-language {
+  height: 100%;
+  width: auto;
+  object-fit: contain;
+}
+
+.dutch:hover,
+.english:hover {
+  transform: scale(1.1);
 }
