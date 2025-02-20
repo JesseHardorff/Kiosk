@@ -6,7 +6,7 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
 
-/* font-family: "Renos-Rough"; */
+/*  font-family: var(--header-font); */
 
 @font-face {
   font-family: "Noto-Sans";
@@ -14,7 +14,7 @@
   font-weight: normal;
   font-style: normal;
 }
-
+/*  font-family: var(--body-font); */
 :root {
   --orange: #ff7520;
   --light-orange: #ffb181;
