@@ -1,15 +1,1 @@
-:root {
-  --orange: #ff7520;
-  --light-orange: #ffb181;
-  --green: #8cd003;
-  --light-green: #deff78;
-  --dark-blue: #053631;
-}
 
-@font-face {
-  font-family: "Renos-Rough";
-  src: url("../fonts/renos-rough-webfont.woff2") format("woff2"),
-    url("../fonts/renos-rough-webfont.woff") format("woff"), url("../fonts/renos-rough.ttf") format("truetype");
-}
-
-/* font-family: "Renos-Rough"; */
