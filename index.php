@@ -1,5 +1,5 @@
 <?php
-include ('assets/core/connect.php');
+include 'assets/core/connect.php';
 // Random getal tussen 1 en 29 (product_id) voor 1ste foto
 $randomProductId = rand(1, 29);
 
@@ -22,14 +22,16 @@ $filename = $result->fetch_assoc()['filename'];
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/ad-page.css">
 
     <title>Kiosk</title>
-  
+
 </head>
+
 <body>
     <header class="kiosk-header">
         <div class="logo-container">
@@ -40,28 +42,29 @@ $filename = $result->fetch_assoc()['filename'];
             <p>Healthy in a Hurry!</p>
         </div>
     </header>
-   <div class="ad-overlay">
- 
-     <div class="ad-product-container">
+    <div class="ad-overlay">
 
-       <div class="ad-title-product-container">
-          <span class="product-name"><?php echo $name; ?></span>
-          <span class="product-kcal"><?php echo $kcal; ?> kcal</span>
-       </div>
+        <div class="ad-product-container">
 
-       <div class="ad-image-product-container">
-          <img src="assets/img/<?php echo $filename; ?>" alt="Random Product" class="ad-product-image">
-       </div>
+            <div class="ad-title-product-container">
+                <span class="product-name"><?php echo $name; ?></span>
+                <span class="product-kcal"><?php echo $kcal; ?> kcal</span>
+            </div>
 
-       <div class="ad-price-product-container">
-          <span class="product-price">€<?php echo number_format($price, 2); ?></span>
-       </div>
-       
-     </div>
-   
-</div>
+            <div class="ad-image-product-container">
+                <img src="assets/img/<?php echo $filename; ?>" alt="Random Product" class="ad-product-image">
+            </div>
+
+            <div class="ad-price-product-container">
+                <span class="product-price">€<?php echo number_format($price, 2); ?></span>
+            </div>
+
+        </div>
+
+    </div>
 
 
 </body>
 <script src="assets/js/fade.js"></script>
+
 </html>
