@@ -7,7 +7,7 @@
 #advert {
     background-color: gray;
     width: 100%;
-    height: 384px;
+    height: 20vh;
 }
 
 
@@ -16,21 +16,23 @@
 #menu-welcomebar {
     background-color: aqua;
     width: 100%;
-    height: 200px;
+    height: 10.416667vh;
 
     display: flex;
 
 }
 
 #menu-welcomebar img {
-    width: 400px;
-    height: 400px;
+   width: 400px;
+   height: 400px;
+   transform: translate(0, -100px);
+   
 }
 
 #menu-welcomebar p {
-    color: var(--orange);
+   color: var(--orange);
 
-    font-size: 3em;
+   font-size: 3em;
     font-family: var(--header-font);
     
     text-align: center;
@@ -41,7 +43,7 @@
  #menu-container {
     background-color: darkgray;
     width: 100%;
-    height: 1000px;
+    height: 52.083333vh;
 
     display: flex;
     flex-direction: row;
@@ -170,18 +172,65 @@
  #cart-container {
     background-color: darkorchid;
 
-    height: 200px;
+    height: 10.416667vh;
     width: 100%;
 
     display: flex;
  }
 
  #cart-img img {
-    /* background-color: fuchsia; */
-    background-image: url("assets/img/dips1.webp");
-    background-size: cover;
+   /* background-color: fuchsia; */
+   background-image: url("assets/img/dips1.webp");
+   background-size: cover;
 
-    height: 150px;
-    width: 150px;
+   height: 150px;
+   width: 150px;
  }
  
+ #cart-img p {
+   color: var(--orange);
+   
+   font-size: 3em;
+   font-family: var(--body-font);
+   font-weight: bold;
+   text-align: center;
+      
+   transform: translate(0, calc(-100% - 1.2em)); 
+ }
+
+ #cart-total {
+   color: var(--orange);
+   font-size: 2.5em;
+   padding: 10px;
+   font-family: var(--body-font);
+   font-weight: bold;
+ }
+
+ #footer-buttons {
+   background-color: darkred;
+   width: 100%;
+   height: 7.083333vh;
+
+   display: flex;
+
+   align-items: end;
+ }
+
+ #verlaat {
+   color: red;
+
+   height: 30px;
+   width: 20%;
+   text-align: center;
+ }
+ 
+ #bestel {
+   background-color: var(--green);
+
+   margin-inline: auto;
+   width: 200px;
+   height: 100px;
+   text-align: center;
+
+   border-radius: 20%;
+ }

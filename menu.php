@@ -62,10 +62,13 @@
         <div id="cart-container">
             <div id="cart-img">
                 <img src="assets/img/dips1.webp" alt="cart">
-                <p>##</p>
+                <p id="cart-amount">##</p>
             </div>
-            <p>Your total:</p>
+            <p id="cart-total">Your total: <br> €##,##</p>
         </div>
-
+        <div id="footer-buttons">
+            <button id="verlaat">X verlaat</button>
+            <button id="bestel">Bestelling Afronden</button>
+        </div>
     </div>
 </main>
