@@ -1,4 +1,8 @@
-<?php include_once 'assets/core/header.php'; ?>
+<?php 
+    include_once 'assets/core/header.php'; 
+    include ('assets/core/connect.php');
+    $cat1 = 6;
+?>
 <main>
     <div id="advert"></div>
     <div id="menu-welcomebar">
@@ -36,26 +40,28 @@
         </nav>
         <!-- </div> -->
         <div id="menu-items">
+        <?php 
+                $sqli_prepare = $conn->prepare("SELECT image_id, `name`, `description`, price, kcal FROM products WHERE category_id = ?");
+                if ($sqli_prepare === false) {
+                    echo mysqli_error($con);
+                } else {
+                    $sqli_prepare->bind_param("i", $cat1);
+                    if ($sqli_prepare->execute()) {
+                        $sqli_prepare->store_result();
+                        $sqli_prepare->bind_result($image_id, $product_name, $product_description, $product_price, $product_kcal);
+                        while ($sqli_prepare->fetch()) { // WHILE START            
+            ?>
             <div class="item-card">
                 <img src="assets/img/breakfast1.webp" alt="menu" class="item-image">
-                <p class="item-title">Item Title</p>
-                <p class="item-price">$9.99</p>
+                <p class="item-title"><?= $product_name ?></p>
+                <p class="item-price"><?= $product_price ?></p>
             </div>
-            <div class="item-card">
-                <img src="assets/img/breakfast1.webp" alt="menu" class="item-image">
-                <p class="item-title">Item Title</p>
-                <p class="item-price">$9.99</p>
-            </div>
-            <div class="item-card">
-                <img src="assets/img/breakfast1.webp" alt="menu" class="item-image">
-                <p class="item-title">Item Title</p>
-                <p class="item-price">$9.99</p>
-            </div>
-            <div class="item-card">
-                <img src="assets/img/breakfast1.webp" alt="menu" class="item-image">
-                <p class="item-title">Item Title</p>
-                <p class="item-price">$9.99</p>
-            </div>
+            <?php
+                        }
+                    }
+                    $sqli_prepare->close();
+                }
+            ?>
         </div>
     </div>
     <div id="footer">
