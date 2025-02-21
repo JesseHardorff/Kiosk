@@ -37,3 +37,34 @@ body {
   color: var(--orange);
   text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
 }
+.order-container {
+  display: flex;
+  margin: 0 10%;
+  width: 80%;
+  height: 40vh;
+  background-color: var(--light-green);
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  border-color: black;
+  border: 2px solid black;
+}
+.order-text {
+  height: 50%;
+  padding: 5% 5 0% 5%;
+  font-family: var(--body-font);
+  font-size: 4.5rem;
+
+  color: var(--orange);
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+}
+.order-number {
+  height: 45%;
+
+  font-family: var(--header-font);
+  font-size: 15rem;
+
+  color: var(--orange);
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+}

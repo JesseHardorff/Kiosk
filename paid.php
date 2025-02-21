@@ -22,11 +22,19 @@
     <div class="thanks-container">
         Thanks for Ordering!
     </div>
+    <div class="order-container">
+        <div class="order-text">
+            Please take the receipt and check the boards for your order status. Your order number is:
+        </div>
+        <div class="order-number">
+            555
+        </div>
+    </div>
 
 
 
 </body>
 
-<script src="assets/js/choose-press.js"></script>
+<!-- <script src="assets/js/choose-press.js"></script> -->
 
 </html>
