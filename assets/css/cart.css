@@ -64,3 +64,170 @@ body {
     font-size: 3rem;
     font-weight: bold;
 }
+
+#header #total-price {
+    color: var(--green);
+
+    width: 40%;
+
+    font-family: var(--header-font);
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: end;
+    margin-right: 10%;
+}
+
+/* MARK: CONTENT
+*/
+
+#content {
+    background-color: green;
+
+    width: 100%;
+    height: calc(60% - 50px);
+
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    gap: 25px;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    overflow-y: scroll;
+}
+
+.item {
+    background-color: blueviolet;
+    color: var(--orange);
+
+    height: 20%;
+    width: calc(100% - 100px);
+
+    margin-inline: 50px;
+
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.item-img {
+    background-color: royalblue;
+
+    height: 18vw;
+    width: 18%;
+
+    margin: 1%;
+}
+
+.name-price {
+    background-color: yellow;
+
+    width: 80%;
+    height: 30%;
+
+    display: flex;
+}
+
+.name-price h2 {
+    color: var(--orange);
+
+    width: 70%;
+
+    font-family: var(--body-font);
+    font-size: 3rem;
+
+    padding-left: 5%;
+}
+
+.name-price p {
+    color: var(--green);
+
+    width: 30%;
+
+    font-family: var(--body-font);
+    font-size: 2rem;
+    font-weight: bold   ;
+    text-align: end;
+    padding-right: 8%;
+}
+
+.detail-box {
+    background-color: red;
+
+    width: 80%;
+    height: 50%;
+
+    display: flex;
+}
+
+.amount-box {
+    background-color: teal;
+
+    width: 25%;
+    height: 20%;
+
+    margin-left: 55%;
+
+    display: flex;
+}
+
+.amount-box .amount-minus {
+    background-color: var(--green);
+    color: var(--orange);
+
+    width: 15%;
+
+    margin-left: 30%;
+
+    border: none;
+    border-radius: 40%;
+
+    font-family: var(--body-font);
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.amount-box .amount-text {
+    color: var(--green);
+
+    width: 10%;
+
+    font-family: var(--body-font);
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.amount-box .amount-plus {
+    background-color: var(--green);
+    color: var(--orange);
+
+    width: 15%;
+
+    border: none;
+    border-radius: 40%;
+
+    font-family: var(--body-font);
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.amount-box .amount-clear {
+    background-color: red;
+    color: var(--green);
+
+    width: 15%;
+
+    margin-left: 2%;
+
+    border: none;
+    border-radius: 40%;
+
+    font-family: var(--body-font);
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+}
