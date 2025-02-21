@@ -25,3 +25,9 @@
   --header-font: "Renos-Rough";
   --body-font: "Noto-Sans";
 }
+
+* {
+  margin: 0;
+  padding: 0;
+  /* outline: green solid 1px; */
+}
