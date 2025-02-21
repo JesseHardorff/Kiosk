@@ -1,0 +1,66 @@
+body {
+    height: 100vh;
+}
+
+#advert-cart {
+    background-color: red;
+    width: 100%;
+    height: 20%;
+}
+
+/* MARK: CART
+*/
+#cart {
+    background-color: blue;
+
+    width: 10vh;
+    height: 10vh;
+
+    margin-left: 50%;
+
+    display: flex;
+
+    transform: translate(-50%, 10vh);
+}
+
+#cart img {
+    width: 100%;
+    height: 100%;
+}
+
+#cart p {
+    color: white;
+    
+    width: 100%;
+    height: 100%;
+    transform: translate(-50%, 25%);
+
+    font-size: 4rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* MARK: HEADER
+*/
+
+#header{
+    background-color: yellow;
+
+    width: 100%;
+    height: 10%;
+
+    /* margin-top: -9%; */
+
+    display: flex;
+    align-items: end;
+}
+
+#header h1 {
+    color: var(--orange);
+
+    width: 60%;
+
+    font-family: var(--header-font);
+    font-size: 3rem;
+    font-weight: bold;
+}
