@@ -12,30 +12,26 @@
     <div id="menu-container">
         <nav id="menu-sidebar">
             <ul>
-                <li class="menu-category">
+                <?php 
+                    $sqli_prepare = $conn->prepare("SELECT category_id, `name`, `description` FROM categories");
+                    if ($sqli_prepare === false) {
+                        echo mysqli_error($conn);
+                    } else {
+                        if ($sqli_prepare->execute()) {
+                            $sqli_prepare->store_result();
+                            $sqli_prepare->bind_result($category_id, $category_name, $category_description);
+                            while ($sqli_prepare->fetch()) { // WHILE START            
+                ?>
+                <li class="category">
                     <img src="assets/img/breakfast1.webp" alt="menu" class="category-icon">
-                    <p class="category-title">BREAKFAST</p>
+                    <p class="category-title"><?= $category_name ?></p>
                 </li>
-                <li class="menu-category">
-                    <img src="assets/img/breakfast1.webp" alt="menu" class="category-icon">
-                    <p class="category-title">BREAKFAST</p>
-                </li>
-                <li class="menu-category">
-                    <img src="assets/img/breakfast1.webp" alt="menu" class="category-icon">
-                    <p class="category-title">BREAKFAST</p>
-                </li>
-                <li class="menu-category">
-                    <img src="assets/img/breakfast1.webp" alt="menu" class="category-icon">
-                    <p class="category-title">BREAKFAST</p>
-                </li>
-                <li class="menu-category">
-                    <img src="assets/img/breakfast1.webp" alt="menu" class="category-icon">
-                    <p class="category-title">BREAKFAST</p>
-                </li>
-                <li class="menu-category">
-                    <img src="assets/img/breakfast1.webp" alt="menu" class="category-icon">
-                    <p class="category-title">BREAKFAST</p>
-                </li>
+                <?php
+                        }
+                    }
+                    $sqli_prepare->close();
+                }
+            ?>
             </ul>
         </nav>
         <!-- </div> -->
@@ -43,7 +39,7 @@
         <?php 
                 $sqli_prepare = $conn->prepare("SELECT image_id, `name`, `description`, price, kcal FROM products WHERE category_id = ?");
                 if ($sqli_prepare === false) {
-                    echo mysqli_error($con);
+                    echo mysqli_error($conn);
                 } else {
                     $sqli_prepare->bind_param("i", $cat1);
                     if ($sqli_prepare->execute()) {
