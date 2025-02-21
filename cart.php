@@ -103,5 +103,10 @@
             </div>
         </div>
     </div>
+    <div id="footer">
+        <button id="verlaat">verlaat</button>
+        <button id="menu">terug naar menu</button>
+        <button id="bestel">bestel</button>
+    </div>
 </body>
 </html>

@@ -20,7 +20,7 @@ body {
 
     display: flex;
 
-    transform: translate(-50%, 10vh);
+    transform: translate(-50%, 15vh);
 }
 
 #cart img {
@@ -231,3 +231,36 @@ body {
     font-weight: bold;
     text-align: center;
 }
+
+/* MARK: FOOTER
+*/
+
+#footer {
+    background-color: yellow;
+
+    width: 100%;
+    height: 10%;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+#verlaat {
+    color: red;
+ 
+    height: 30px;
+    width: 20%;
+    text-align: center;
+  }
+
+  
+  #menu, #bestel {
+    background-color: var(--green);
+ 
+    margin-inline: auto;
+    width: 200px;
+    height: 100px;
+    text-align: center;
+ 
+    border-radius: 20%;
+  }
