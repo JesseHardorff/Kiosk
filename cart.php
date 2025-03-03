@@ -24,7 +24,10 @@
                 <h2>Item Name</h2>
                 <p>€8.88</p>
             </div>
-            <div class="detail-box"></div>
+            <div class="detail-box">
+                <div class="description">A health meal Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit expedita libero quae quisquam provident. Earum vero nesciunt sunt, nemo suscipit libero eius.</div>
+                <div class="kcals">120 kcal</div>
+            </div>
             <div class="amount-box">
                 <button class="amount-minus">-</button>
                 <p class="amount-text">1</p>
@@ -38,7 +41,10 @@
                 <h2>Item Name</h2>
                 <p>€8.88</p>
             </div>
-            <div class="detail-box"></div>
+            <div class="detail-box">
+                <div class="description">A health meal Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit expedita libero quae quisquam provident. Earum vero nesciunt sunt, nemo suscipit libero eius.</div>
+                <div class="kcals">120 kcal</div>
+            </div>
             <div class="amount-box">
                 <button class="amount-minus">-</button>
                 <p class="amount-text">1</p>
@@ -52,7 +58,10 @@
                 <h2>Item Name</h2>
                 <p>€8.88</p>
             </div>
-            <div class="detail-box"></div>
+            <div class="detail-box">
+                <div class="description">A health meal Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit expedita libero quae quisquam provident. Earum vero nesciunt sunt, nemo suscipit libero eius.</div>
+                <div class="kcals">120 kcal</div>
+            </div>
             <div class="amount-box">
                 <button class="amount-minus">-</button>
                 <p class="amount-text">1</p>
@@ -66,7 +75,10 @@
                 <h2>Item Name</h2>
                 <p>€8.88</p>
             </div>
-            <div class="detail-box"></div>
+            <div class="detail-box">
+                <div class="description">A health meal Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit expedita libero quae quisquam provident. Earum vero nesciunt sunt, nemo suscipit libero eius.</div>
+                <div class="kcals">120 kcal</div>
+            </div>
             <div class="amount-box">
                 <button class="amount-minus">-</button>
                 <p class="amount-text">1</p>
@@ -80,7 +92,10 @@
                 <h2>Item Name</h2>
                 <p>€8.88</p>
             </div>
-            <div class="detail-box"></div>
+            <div class="detail-box">
+                <div class="description">A health meal Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit expedita libero quae quisquam provident. Earum vero nesciunt sunt, nemo suscipit libero eius.</div>
+                <div class="kcals">120 kcal</div>
+            </div>
             <div class="amount-box">
                 <button class="amount-minus">-</button>
                 <p class="amount-text">1</p>
@@ -94,7 +109,10 @@
                 <h2>Item Name</h2>
                 <p>€8.88</p>
             </div>
-            <div class="detail-box"></div>
+            <div class="detail-box">
+                <div class="description">A health meal Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit expedita libero quae quisquam provident. Earum vero nesciunt sunt, nemo suscipit libero eius.</div>
+                <div class="kcals">120 kcal</div>
+            </div>
             <div class="amount-box">
                 <button class="amount-minus">-</button>
                 <p class="amount-text">1</p>
@@ -104,9 +122,9 @@
         </div>
     </div>
     <div id="footer">
-        <button id="verlaat">verlaat</button>
-        <button id="menu">terug naar menu</button>
-        <button id="bestel">bestel</button>
+        <a id="verlaat" href="start.php">verlaat</a>
+        <a id="menu" href="menu.php">terug naar menu</a>
+        <a id="bestel" href="check.php">bestel</a>
     </div>
 </body>
 </html>
