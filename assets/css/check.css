@@ -1,17 +1,14 @@
 body {
     height: 100vh;
+    background: linear-gradient(to right, #deff78, #8cd003);
 }
 
 /* MARK: HEADER
 */
 
 #header{
-    background-color: yellow;
-
     width: 100%;
     height: 10%;
-
-    /* margin-top: -9%; */
 
     display: flex;
     align-items: end;
@@ -19,7 +16,6 @@ body {
 
 #header h1 {
     color: var(--orange);
-
 
     font-family: var(--header-font);
     font-size: 5rem;
@@ -30,8 +26,6 @@ body {
 */
 
 #content {
-    background-color: green;
-
     width: 100%;
     height: calc(70% - 50px);
 
@@ -47,7 +41,7 @@ body {
 }
 
 .item {
-    background-color: blueviolet;
+    background-color: var(--light-green);
     color: var(--orange);
 
     height: 220.4px;
@@ -61,8 +55,6 @@ body {
 }
 
 .item-img {
-    background-color: royalblue;
-
     height: 18vw;
     width: 18%;
 
@@ -70,8 +62,6 @@ body {
 }
 
 .name-price {
-    background-color: yellow;
-
     width: 80%;
     height: 30%;
 
@@ -102,8 +92,6 @@ body {
 }
 
 .detail-box {
-    background-color: red;
-
     width: 80%;
     height: 50%;
 
@@ -122,8 +110,6 @@ body {
 }
 
 .amount-box {
-    background-color: teal;
-
     width: 25%;
     height: 20%;
 
@@ -196,8 +182,6 @@ body {
 */
 
 #footer {
-    background-color: yellow;
-
     width: 100%;
     height: 20%;
 
@@ -207,7 +191,6 @@ body {
 }
 
 #footer-total {
-    background-color: aqua;
     color: var(--orange);
 
     width: 100%;
@@ -221,11 +204,8 @@ body {
 }
 
 #footer-total img {
-    background-color: red;
-
     height: 80%;
     width: 153.59px;
-    /* width: 10vh; */
     margin: auto 20px;
     margin-right: 100px;
 }
@@ -261,7 +241,10 @@ body {
     text-align: center;
 
     font-family: var(--body-font);
+    font-weight: bold;
     font-size: 2rem;
+
+    text-decoration: none;
   }
 
   
