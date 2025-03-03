@@ -115,7 +115,7 @@
     </div>
     <div id="footer">
         <div id="footer-total">
-            <img src="" alt="" id="footer-logo"> 
+            <img src="" alt="logo" id="footer-logo"> 
             <h1>YOUR TOTAL</h1>
             <p>€88.88</p>
         </div>
