@@ -1,6 +1,7 @@
 <?php
 include_once 'assets/core/header.php';
 include 'assets/core/connect.php';
+echo "Current order ID: " . $_SESSION['order_id'];
 $cat1 = isset($_GET['cat']) ? (int) $_GET['cat'] : 1; // 1 is default category
 ?>
 <main>
@@ -43,11 +44,11 @@ $cat1 = isset($_GET['cat']) ? (int) $_GET['cat'] : 1; // 1 is default category
             <?php
             // First prepare the products query
             $sqli_prepare = $conn->prepare("
-        SELECT p.image_id, p.name,  p.price, i.filename 
-        FROM products p
-        JOIN images i ON p.image_id = i.image_id
-        WHERE p.category_id = ?
-    ");
+            SELECT p.product_id, p.image_id, p.name, p.price, i.filename 
+            FROM products p
+            JOIN images i ON p.image_id = i.image_id
+            WHERE p.category_id = ?
+        ");
 
             if ($sqli_prepare === false) {
                 echo mysqli_error($conn);
@@ -55,10 +56,12 @@ $cat1 = isset($_GET['cat']) ? (int) $_GET['cat'] : 1; // 1 is default category
                 $sqli_prepare->bind_param("i", $cat1);
                 if ($sqli_prepare->execute()) {
                     $sqli_prepare->store_result();
-                    $sqli_prepare->bind_result($image_id, $product_name, $product_price, $image_filename);
+                    $sqli_prepare->bind_result($product_id, $image_id, $product_name, $product_price, $image_filename);
                     while ($sqli_prepare->fetch()) {
+
                         ?>
-                        <div class="item-card">
+                        <div class="item-card" data-product-id="<?= $product_id ?>">
+
                             <img src="assets/img/<?= $image_filename ?>" alt="menu" class="item-image">
                             <div class="item-info">
                                 <p class="item-title"><?= $product_name ?></p>
