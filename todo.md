@@ -14,7 +14,12 @@
 **4. Paid Screen**
 - load & send stuff from/to DB
 
-**5. Tests**
+**5. Change all to english**
+- Change all texts to english
+- gray out the dutch option or remove it
+
+
+**6. Tests**
 - Functional Test
 - Compatibility Test 
 - Performance Test
