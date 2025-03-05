@@ -1,0 +1,273 @@
+body {
+    height: 100vh;
+    background: linear-gradient(to right, #deff78, #8cd003);
+}
+
+#advert-cart {
+    background-color: red;
+    width: 100%;
+    height: 20%;
+}
+
+/* MARK: CART
+*/
+#cart {
+    background-color: blue;
+
+    width: 10vh;
+    height: 10vh;
+
+    margin-left: 50%;
+
+    display: flex;
+
+    transform: translate(-50%, 15vh);
+}
+
+#cart img {
+    width: 100%;
+    height: 100%;
+}
+
+#cart p {
+    color: white;
+    
+    width: 100%;
+    height: 100%;
+    transform: translate(-50%, 25%);
+
+    font-size: 4rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* MARK: HEADER
+*/
+
+#header{
+    width: 100%;
+    height: 10%;
+
+    /* margin-top: -9%; */
+
+    display: flex;
+    align-items: end;
+}
+
+#header h1 {
+    color: var(--orange);
+
+    width: 60%;
+
+    font-family: var(--header-font);
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+#header #total-price {
+    color: var(--green);
+
+    width: 40%;
+
+    font-family: var(--header-font);
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: end;
+    margin-right: 10%;
+}
+
+/* MARK: CONTENT
+*/
+
+#content {
+    width: 100%;
+    height: calc(60% - 50px);
+
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    gap: 25px;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    overflow-y: scroll;
+}
+
+.item {
+    background-color: var(--light-green);
+    color: var(--orange);
+
+    height: 20%;
+    width: calc(100% - 100px);
+
+    margin-inline: 50px;
+
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.item-img {
+    height: 18vw;
+    width: 18%;
+
+    margin: 1%;
+}
+
+.name-price {
+    width: 80%;
+    height: 30%;
+
+    display: flex;
+}
+
+.name-price h2 {
+    color: var(--orange);
+
+    width: 70%;
+
+    font-family: var(--body-font);
+    font-size: 3rem;
+
+    padding-left: 5%;
+}
+
+.name-price p {
+    color: var(--green);
+
+    width: 30%;
+
+    font-family: var(--body-font);
+    font-size: 2rem;
+    font-weight: bold   ;
+    text-align: end;
+    padding-right: 8%;
+}
+
+.detail-box {
+    width: 80%;
+    height: 50%;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.detail-box .description {
+    font-family: var(--body-font);
+    font-size: 1.3rem;
+}
+
+.detail-box .kcals {
+    font-family: var(--body-font);
+    font-size: 1.8rem;
+}
+
+.amount-box {
+    width: 25%;
+    height: 20%;
+
+    margin-left: 55%;
+
+    display: flex;
+}
+
+.amount-box .amount-minus {
+    background-color: var(--green);
+    color: var(--orange);
+
+    width: 15%;
+
+    margin-left: 30%;
+
+    border: none;
+    border-radius: 40%;
+
+    font-family: var(--body-font);
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.amount-box .amount-text {
+    color: var(--green);
+
+    width: 10%;
+
+    font-family: var(--body-font);
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.amount-box .amount-plus {
+    background-color: var(--green);
+    color: var(--orange);
+
+    width: 15%;
+
+    border: none;
+    border-radius: 40%;
+
+    font-family: var(--body-font);
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.amount-box .amount-clear {
+    background-color: red;
+    color: var(--green);
+
+    width: 15%;
+
+    margin-left: 2%;
+
+    border: none;
+    border-radius: 40%;
+
+    font-family: var(--body-font);
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* MARK: FOOTER
+*/
+
+#footer {
+    width: 100%;
+    height: 10%;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+#verlaat {
+    color: red;
+ 
+    height: 30px;
+    width: 20%;
+    text-align: center;
+
+    font-family: var(--body-font);
+    font-weight: bold;
+    font-size: 2rem;
+
+    text-decoration: none;
+  }
+
+  
+  #menu, #bestel {
+    background-color: var(--green);
+ 
+    margin-inline: auto;
+    width: 200px;
+    height: 100px;
+    text-align: center;
+ 
+    border-radius: 20%;
+
+    font-family: var(--body-font);
+    font-size: 2rem;
+  }
