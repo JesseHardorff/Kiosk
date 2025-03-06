@@ -63,9 +63,9 @@ foreach ($rows as $row) {
             <h1>YOUR TOTAL</h1>
             <p>€<?= number_format($total_price, 2) ?></p>
         </div>
-        <a id="verlaat" href="start.php">verlaat</a>
-        <a id="menu" href="menu.php">terug naar menu</a>
-        <a id="bestel" href="paid.php">bestelling afronden</a>
+        <a id="verlaat" href="start.php">exit</a>
+        <a id="menu" href="cart.php">change order</a>
+        <a id="bestel" href="paid.php">pay</a>
     </div>
 </body>
 <script src="assets/js/cart.js"></script>

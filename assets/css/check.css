@@ -115,14 +115,14 @@ body {
 }
 
 .amount-box {
-  width: 245px;
+  width: 80px;
   height: 44.08px;
 
   display: flex;
 
   position: absolute;
   bottom: 10px;
-  right: 10px;
+  right: 30px;
 }
 
 .amount-box .amount-minus {
@@ -143,9 +143,13 @@ body {
 }
 
 .amount-box .amount-text {
-  color: var(--green);
+  background-color: var(--orange);
+  color: white;
 
-  width: 10%;
+  min-width: 40px;
+  /* width: calc(fit-content + 20px); */  
+
+  border-radius: 50%;
 
   font-family: var(--body-font);
   font-size: 2rem;
@@ -243,13 +247,17 @@ body {
 #verlaat {
   color: red;
 
-  height: 30px;
+  height: 100px;
   width: 20%;
   text-align: center;
 
   font-family: var(--body-font);
   font-weight: bold;
   font-size: 2rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   text-decoration: none;
 }
@@ -259,12 +267,19 @@ body {
   background-color: var(--green);
 
   margin-inline: auto;
-  width: 200px;
+  margin-bottom: 100px;
+  width: 300px;
   height: 100px;
-  text-align: center;
+  /* text-align: center; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   border-radius: 20%;
 
   font-family: var(--body-font);
   font-size: 2rem;
+
+  text-decoration: none;
+  color: var(--orange);
 }
