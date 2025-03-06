@@ -3,10 +3,82 @@ body {
   background: linear-gradient(to right, #deff78, #8cd003);
 }
 
+/* MARK: ADVERT
+*/
 #advert-cart {
   background-color: red;
   width: 100%;
   height: 20%;
+}
+/* MARK: ADVERT
+ */
+ #advert {
+  background-color: var(--light-green);
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+#advert-img {
+  /* width: 100%; */
+  height: calc(100% - 20px);
+
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-right: 40px;
+}
+
+#advert-title {
+  color: var(--orange);
+
+  width: calc(100% - 424px);
+  height: fit-content;
+
+  font-size: 3em;
+  font-family: var(--header-font);
+  font-weight: bold;
+  
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+#advert-description {
+  color: var(--orange);
+
+  width: calc(100% - 424px);
+
+  font-size: 2em;
+  font-family: var(--body-font);
+  margin-left: 20px;
+}
+
+#advert-price {
+  color: var(--orange);
+
+  width: calc(60% - 424px);
+
+  font-size: 4em;
+  font-family: var(--body-font);
+  font-weight: bold;
+
+  margin-left: 20px;
+  /* padding-bottom: 193px; */
+}
+
+#advert-kcal {
+  color: var(--orange);
+
+  height: 80px;
+  width: calc(60%);
+
+  font-size: 4em;
+  font-family: var(--body-font);
+  font-weight: bold;
+
+  margin-left: 20px;
 }
 
 /* MARK: CART

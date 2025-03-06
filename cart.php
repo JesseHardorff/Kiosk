@@ -38,7 +38,13 @@ foreach ($rows as $row) {
 
 <body>
     <div id="advert-cart">
-        <div id="advert"></div>
+        <div id="advert">
+            <img src="assets/img/sides3.webp" alt="advert" id="advert-img">
+            <p id="advert-title">Mini Veggie Platter</p>
+            <p id="advert-description">A selection of carrot sticks, celery, cucumber slices, and cherry tomatoes served with a dip of your choice.</p>
+            <p id="advert-price">€3.00</p>
+            <p id="advert-kcal">150 kcal</p>
+        </div>
         <div id="cart">
             <div id="cart-image"></div>
             <img>
