@@ -40,6 +40,7 @@ foreach ($rows as $row) {
     <div id="advert-cart">
         <div id="advert"></div>
         <div id="cart">
+            <div id="cart-image"></div>
             <img>
             <p><?php
             $total_items = 0;
