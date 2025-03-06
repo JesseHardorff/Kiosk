@@ -25,7 +25,7 @@ $cat1 = isset($_GET['cat']) ? (int) $_GET['cat'] : 1; // 1 is default category
                         $sqli_prepare->bind_result($category_id, $category_name, $category_description);
                         while ($sqli_prepare->fetch()) { // WHILE START            
                             ?>
-                            <li class="category">
+                            <li class="menu-category">
                                 <a href="menu.php?cat=<?= $category_id ?>">
                                     <img src="assets/img/breakfast1.webp" alt="menu" class="category-icon">
                                     <p class="category-title"><?= $category_name ?></p>
