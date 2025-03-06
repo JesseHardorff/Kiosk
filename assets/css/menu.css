@@ -9,10 +9,49 @@ body {
   background: linear-gradient(to right, #deff78, #8cd003);
 }
 
+/* MARK: ADVERT
+ */
 #advert {
   background-color: gray;
   width: 100%;
   height: 20vh;
+
+  display: flex;
+  /* flex-direction: row; */
+  flex-wrap: wrap;
+}
+
+#advert-img {
+  /* width: 100%; */
+  height: calc(100% - 20px);
+
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-right: 40px;
+}
+
+#advert-title {
+  color: var(--orange);
+
+  width: calc(100% - 424px);
+  height: fit-content;
+
+  font-size: 3em;
+  font-family: var(--header-font);
+  font-weight: bold;
+  text-align: center;
+
+  margin-top: 20px;
+}
+
+#advert-description {
+  color: var(--orange);
+
+  width: calc(100% - 424px);
+
+  font-size: 2em;
+  font-family: var(--body-font);
+  text-align: center;
 }
 
 /* MARK: WELCOMEBAR

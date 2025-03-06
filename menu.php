@@ -5,7 +5,13 @@ echo "Current order ID: " . $_SESSION['order_id'];
 $cat1 = isset($_GET['cat']) ? (int) $_GET['cat'] : 1; // 1 is default category
 ?>
 <main>
-    <div id="advert"></div>
+    <div id="advert">
+        <img src="assets/img/sides3.webp" alt="advert" id="advert-img">
+        <p id="advert-title">Mini Veggie Platter</p>
+        <p id="advert-description">A selection of carrot sticks, celery, cucumber slices, and cherry tomatoes served with a dip of your choice.</p>
+        <p id="advert-price">€3.00</p>
+        <p id="advert-kcal">150 kcal</p>
+    </div>
     <div id="menu-welcomebar">
         <div class="logo-container">
             <img src="assets/img/co_logo.png" alt="logo" id="logo">
@@ -95,5 +101,6 @@ $cat1 = isset($_GET['cat']) ? (int) $_GET['cat'] : 1; // 1 is default category
 </main>
 </body>
 <script src="assets/js/menu.js"></script>
+
 
 </html>
