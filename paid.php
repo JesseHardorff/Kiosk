@@ -27,8 +27,9 @@
             Please take the receipt and check the boards for your order status. Your order number is:
         </div>
         <div class="order-number">
-            555
+            <?php echo $_GET['pickup']; ?>
         </div>
+
     </div>
 
 

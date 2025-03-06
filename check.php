@@ -63,11 +63,32 @@ foreach ($rows as $row) {
             <h1>YOUR TOTAL</h1>
             <p>€<?= number_format($total_price, 2) ?></p>
         </div>
-        <a id="verlaat" href="start.php">exit</a>
-        <a id="menu" href="cart.php">change order</a>
-        <a id="bestel" href="paid.php">pay</a>
+        <a id="verlaat" href="start.php">verlaat</a>
+        <a id="menu" href="menu.php">terug naar menu</a>
+        <a id="bestel">bestelling afronden</a>
     </div>
 </body>
 <script src="assets/js/cart.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        document.querySelector("#bestel").addEventListener("click", function () {
+            console.log("Bestel clicked");
+            fetch("update_order_status.php", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/x-www-form-urlencoded",
+                }
+            })
+                .then(response => response.json())
+                .then(data => {
+                    console.log("Response:", data);
+                    window.location.href = `paid.php?pickup=${data.pickup_number}`;
+                })
+                .catch(error => {
+                    console.log("Error:", error);
+                });
+        });
+    });
+</script>
 
 </html>
