@@ -33,13 +33,13 @@ body {
 #advert-title {
   color: var(--orange);
 
-  width: calc(100% - 424px);
+  width: calc(100% - 444px);
   height: fit-content;
 
   font-size: 3em;
   font-family: var(--header-font);
   font-weight: bold;
-  
+
   margin-top: 20px;
   margin-left: 20px;
 }
@@ -47,7 +47,7 @@ body {
 #advert-description {
   color: var(--orange);
 
-  width: calc(100% - 424px);
+  width: calc(100% - 444px);
 
   font-size: 2em;
   font-family: var(--body-font);
@@ -57,7 +57,7 @@ body {
 #advert-price {
   color: var(--orange);
 
-  width: calc(60% - 424px);
+  width: calc(60% - 444px);
 
   font-size: 4em;
   font-family: var(--body-font);
@@ -221,6 +221,19 @@ nav ul {
   height: 40%;
   display: flex;
 }
+#advert-price-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 60%;
+}
+
+#advert-price,
+#advert-kcal {
+  margin: 0;
+}
+
 .item-title {
   color: var(--orange);
 
@@ -287,14 +300,19 @@ li {
   justify-content: center;
 }
 #cart-img p {
-  color: var(--orange);
-
   font-size: 3em;
   font-family: var(--body-font);
   font-weight: bold;
   text-align: center;
 
   transform: translate(0, calc(-100% - 1.2em));
+  color: white;
+  margin-right: 30px;
+  margin-top: 30px;
+  font-size: 4rem;
+  font-weight: bold;
+  text-align: center;
+  text-shadow: 0 0 10px black;
 }
 
 #cart-total {
