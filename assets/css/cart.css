@@ -93,6 +93,7 @@ body {
   gap: 25px;
 
   display: flex;
+  align-content: flex-start;
   flex-wrap: wrap;
 
   overflow-y: scroll;
@@ -110,6 +111,8 @@ body {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
+
+  position: relative;
 }
 
 .item-img {
@@ -121,7 +124,8 @@ body {
 
 .name-price {
   width: 80%;
-  height: 30%;
+  height: fit-content;
+  min-height: 30%;
 
   display: flex;
 }
@@ -151,7 +155,7 @@ body {
 
 .detail-box {
   width: 80%;
-  height: 50%;
+  height: 40%;
 
   display: flex;
   flex-direction: column;
@@ -168,12 +172,14 @@ body {
 }
 
 .amount-box {
-  width: 25%;
-  height: 20%;
-
-  margin-left: 55%;
+  width: 245px;
+  height: 44.08px;
 
   display: flex;
+
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
 }
 
 .amount-box .amount-minus {
