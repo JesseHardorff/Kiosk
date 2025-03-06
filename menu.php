@@ -85,7 +85,8 @@ $cat1 = isset($_GET['cat']) ? (int) $_GET['cat'] : 1; // 1 is default category
                     <p id="cart-amount">##</p>
                 </div>
             </div>
-            <p id="cart-total">Your total: <br> €##,##</p>
+            <p id="cart-total">€<?= number_format($total_price, 2) ?></p>
+
         </div>
         <div id="footer-buttons">
             <div class="verlaat">X verlaat</div>
@@ -95,5 +96,6 @@ $cat1 = isset($_GET['cat']) ? (int) $_GET['cat'] : 1; // 1 is default category
 </main>
 </body>
 <script src="assets/js/menu.js"></script>
+<script src="assets/js/cart.js"></script>
 
 </html>

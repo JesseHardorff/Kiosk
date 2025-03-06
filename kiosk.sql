@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 20, 2025 at 09:14 AM
+-- Generation Time: Mar 06, 2025 at 10:41 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -115,7 +115,8 @@ CREATE TABLE `orders` (
 CREATE TABLE `order_product` (
   `order_id` int(11) NOT NULL,
   `product_id` int(11) NOT NULL,
-  `price` decimal(10,2) NOT NULL
+  `price` decimal(10,2) NOT NULL,
+  `quantity` int(11) DEFAULT 1
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
@@ -219,8 +220,8 @@ ALTER TABLE `orders`
 -- Indexes for table `order_product`
 --
 ALTER TABLE `order_product`
-  ADD PRIMARY KEY (`order_id`),
-  ADD KEY `product_id` (`product_id`);
+  ADD KEY `product_id` (`product_id`),
+  ADD KEY `order_id` (`order_id`);
 
 --
 -- Indexes for table `order_status`
@@ -256,13 +257,7 @@ ALTER TABLE `images`
 -- AUTO_INCREMENT for table `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `order_id` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `order_product`
---
-ALTER TABLE `order_product`
-  MODIFY `order_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `order_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
 
 --
 -- AUTO_INCREMENT for table `order_status`

@@ -65,7 +65,7 @@ body {
 }
 
 #header #total-price {
-  color: var(--green);
+  color: var(--orange);
 
   width: 40%;
 

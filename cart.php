@@ -19,8 +19,8 @@ $result = $stmt->get_result();
 $rows = $result->fetch_all(MYSQLI_ASSOC);
 
 $total_price = 0;
-foreach($rows as $row) {
-    $total_price += $row['order_price'] * $row['quantity'];
+foreach ($rows as $row) {
+    $total_price += ($row['order_price'] * $row['quantity']);
 }
 
 ?>
@@ -41,22 +41,32 @@ foreach($rows as $row) {
         <div id="advert"></div>
         <div id="cart">
             <img>
-            <p>##</p>
+            <p><?php
+            $total_items = 0;
+            foreach ($rows as $row) {
+                $total_items += $row['quantity'];
+            }
+            echo $total_items;
+            ?></p>
         </div>
+
     </div>
 
     <div id="header">
         <h1>YOUR ORDER</h1>
         <p id="total-price">€<?= number_format($total_price, 2) ?></p>
 
+
     </div>
     <div id="content">
-    <?php foreach($rows as $row) { ?>
-        <div class="item">
+        <?php foreach ($rows as $row) { ?>
+            <div class="item" data-base-price="<?= $row['order_price'] ?>">
+
                 <img src="assets/img/<?= $row['filename'] ?>" alt="<?= $row['name'] ?>" class="item-img">
                 <div class="name-price">
                     <h2><?= $row['name'] ?></h2>
-                    <p>€<?= number_format($row['order_price'], 2) ?></p>
+                    <p>€<?= number_format($row['order_price'] * $row['quantity'], 2) ?></p>
+
 
                 </div>
                 <div class="detail-box">
