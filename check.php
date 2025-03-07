@@ -71,6 +71,7 @@ foreach ($rows as $row) {
 
 <script src="assets/js/cart.js"></script>
 <script>
+    
     document.addEventListener('DOMContentLoaded', function () {
         document.querySelector("#bestel").addEventListener("click", function () {
             console.log("Bestel clicked");
