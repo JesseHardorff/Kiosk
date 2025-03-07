@@ -379,6 +379,8 @@ body {
   color: var(--orange);
 }
 #empty-cart-message {
+
+  font-family: var(--body-font);
   font-size: 44px;
   font-weight: bold;
   margin: 20px auto;

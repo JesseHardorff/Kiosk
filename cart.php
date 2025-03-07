@@ -111,7 +111,7 @@ $count = $result->fetch_assoc()['count'];
         } ?>
     </div>
     <div id="footer">
-        <a class="verlaat" href="start.php">exit</a>
+        <a class="verlaat" href="start.php">X exit</a>
         <a id="menu" href="menu.php">back to menu</a>
         <?php if ($count > 0) { ?>
             <a id="bestel2" href="check.php">order</a>
