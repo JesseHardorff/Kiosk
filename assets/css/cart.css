@@ -378,3 +378,15 @@ body {
   text-decoration: none;
   color: var(--orange);
 }
+#empty-cart-message {
+  font-size: 44px;
+  font-weight: bold;
+  margin: 20px auto;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: all 0.3s ease;
+  text-align: center;
+  z-index: 1000;
+}

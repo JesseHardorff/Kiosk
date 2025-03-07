@@ -1,4 +1,3 @@
--
 <!DOCTYPE html>
 <html lang="en">
 
@@ -35,6 +34,13 @@
 
 
 </body>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        setTimeout(function () {
+            window.location.href = 'index.php';
+        }, 7500);
+    });
+</script>
 
 <!-- <script src="assets/js/choose-press.js"></script> -->
 

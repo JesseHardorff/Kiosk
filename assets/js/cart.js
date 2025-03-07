@@ -33,9 +33,9 @@ document.querySelectorAll(".amount-clear").forEach((button) => {
           quantityElement.textContent = newQuantity;
         } else {
           itemElement.remove();
+          checkAndUpdateEmptyState(); // Moved here after item removal
         }
 
-        // Recalculate total after removal
         let total = 0;
         document.querySelectorAll(".name-price p").forEach((price) => {
           total += parseFloat(price.textContent.replace("€", ""));
@@ -109,6 +109,7 @@ document.querySelectorAll(".amount-minus").forEach((button) => {
           document.getElementById("total-price").textContent = "€" + total.toFixed(2);
         } else {
           itemElement.remove();
+          checkAndUpdateEmptyState(); // Add this line
         }
         updateCartCount();
       });
@@ -124,21 +125,65 @@ function updateCartCount() {
   document.querySelector("#cart p").textContent = totalItems;
   document.querySelector("#cart-amount").textContent = totalItems;
 }
-document.querySelector("#bestel").addEventListener("click", function(e) {
+document.querySelector("#bestel").addEventListener("click", function (e) {
   e.preventDefault(); // Add this line to prevent default link behavior
   console.log("Bestel clicked");
   fetch("update_order_status.php", {
-      method: "POST",
-      headers: {
-          "Content-Type": "application/x-www-form-urlencoded",
-      }
+    method: "POST",
+    headers: {
+      "Content-Type": "application/x-www-form-urlencoded",
+    },
   })
-  .then(response => response.json())
-  .then(data => {
+    .then((response) => response.json())
+    .then((data) => {
       console.log("Response:", data);
       window.location.href = `paid.php?pickup=${data.pickup_number}`;
-  })
-  .catch(error => {
+    })
+    .catch((error) => {
       console.log("Error:", error);
-  });
+    });
 });
+// Show/hide empty cart message
+function checkEmptyCart() {
+  const items = document.querySelectorAll(".item");
+  const emptyMessage = document.getElementById("empty-cart-message");
+  if (items.length === 0) {
+    emptyMessage.style.display = "block";
+  } else {
+    emptyMessage.style.display = "none";
+  }
+}
+
+// Call on page load
+document.addEventListener("DOMContentLoaded", checkEmptyCart);
+
+document.querySelector("#bestel2").addEventListener("click", function (e) {
+  const items = document.querySelectorAll(".item");
+  if (items.length === 0) {
+    e.preventDefault();
+    const message = document.querySelector("#empty-cart-message");
+    if (message) {
+      message.classList.add("message-animate");
+      setTimeout(() => {
+        message.classList.remove("message-animate");
+      }, 3000);
+    }
+  }
+});
+
+function checkAndUpdateEmptyState() {
+  const items = document.querySelectorAll(".item");
+  if (items.length === 0) {
+    document.getElementById("bestel2").style.pointerEvents = "none";
+    document.getElementById("bestel2").style.opacity = "0.5";
+    document.getElementById("bestel2").href = "#";
+
+    // Show empty cart message
+    const emptyMessage = document.createElement("div");
+    emptyMessage.id = "empty-cart-message";
+    emptyMessage.style.color = "red";
+    emptyMessage.style.textAlign = "center";
+    emptyMessage.textContent = "You don't have anything in your cart";
+    document.getElementById("content").prepend(emptyMessage);
+  }
+}
