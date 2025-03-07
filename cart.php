@@ -23,6 +23,15 @@ foreach ($rows as $row) {
     $total_price += ($row['order_price'] * $row['quantity']);
 }
 
+
+
+$sql = "SELECT COUNT(*) as count FROM order_product WHERE order_id = ?";
+$stmt = $conn->prepare($sql);
+$stmt->bind_param("i", $current_order);
+$stmt->execute();
+$result = $stmt->get_result();
+$count = $result->fetch_assoc()['count'];
+
 ?>
 
 <!DOCTYPE html>
@@ -69,36 +78,48 @@ foreach ($rows as $row) {
 
     </div>
     <div id="content">
-        <?php foreach ($rows as $row) { ?>
-            <div class="item" data-base-price="<?= $row['order_price'] ?>">
-
-                <img src="assets/img/<?= $row['filename'] ?>" alt="<?= $row['name'] ?>" class="item-img">
-                <div class="name-price">
-                    <h2><?= $row['name'] ?></h2>
-                    <p>€<?= number_format($row['order_price'] * $row['quantity'], 2) ?></p>
-
-
-                </div>
-                <div class="detail-box">
-                    <div class="description"><?= $row['description'] ?></div>
-                    <div class="kcals"><?= $row['kcal'] ?> kcal</div>
-                </div>
-                <div class="amount-box">
-                    <button class="amount-minus">-</button>
-                    <p class="amount-text"><?= $row['quantity'] ?></p>
-
-                    <button class="amount-plus">+</button>
-                    <button class="amount-clear" data-product-id="<?= $row['product_id'] ?>">X</button>
-
-                </div>
+        <?php if ($count == 0) { ?>
+            <div id="empty-cart-message" style="color: red; text-align: center;">
+                You don't have anything in your cart
             </div>
-        <?php } ?>
+        <?php } else { ?>
+            <?php foreach ($rows as $row) { ?>
+                <div class="item" data-base-price="<?= $row['order_price'] ?>">
+
+                    <img src="assets/img/<?= $row['filename'] ?>" alt="<?= $row['name'] ?>" class="item-img">
+                    <div class="name-price">
+                        <h2><?= $row['name'] ?></h2>
+                        <p>€<?= number_format($row['order_price'] * $row['quantity'], 2) ?></p>
+
+
+                    </div>
+                    <div class="detail-box">
+                        <div class="description"><?= $row['description'] ?></div>
+                        <div class="kcals"><?= $row['kcal'] ?> kcal</div>
+                    </div>
+                    <div class="amount-box">
+                        <button class="amount-minus">-</button>
+                        <p class="amount-text"><?= $row['quantity'] ?></p>
+
+                        <button class="amount-plus">+</button>
+                        <button class="amount-clear" data-product-id="<?= $row['product_id'] ?>">X</button>
+
+                    </div>
+                </div>
+
+            <?php }
+        } ?>
     </div>
     <div id="footer">
         <a class="verlaat" href="start.php">exit</a>
         <a id="menu" href="menu.php">back to menu</a>
-        <a id="bestel2" href="check.php">order</a>
+        <?php if ($count > 0) { ?>
+            <a id="bestel2" href="check.php">order</a>
+        <?php } else { ?>
+            <a id="bestel2" style="pointer-events: none; opacity: 0.5;">order</a>
+        <?php } ?>
     </div>
+
 </body>
 <script src="assets/js/cart.js"></script>
 
