@@ -5,7 +5,8 @@
 }
 
 body {
-  height: 100vh;
+  max-height: 100vh;
+  overflow: hidden;
   background: linear-gradient(to right, #deff78, #8cd003);
 }
 
