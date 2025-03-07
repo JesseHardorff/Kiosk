@@ -98,8 +98,8 @@ $cat1 = isset($_GET['cat']) ? (int) $_GET['cat'] : 1; // 1 is default category
 
         </div>
         <div id="footer-buttons">
-            <div class="verlaat">X verlaat</div>
-            <div class="bestel">Bestelling Afronden</div>
+            <div class="verlaat">X exit</div>
+            <div class="bestel">Finish Ordering</div>
         </div>
     </div>
 </main>

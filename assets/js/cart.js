@@ -124,20 +124,20 @@ function updateCartCount() {
   document.querySelector("#cart p").textContent = totalItems;
   document.querySelector("#cart-amount").textContent = totalItems;
 }
-document.querySelector("#bestel").addEventListener("click", function () {
-  console.log("Bestel clicked");
-  fetch("update_order_status.php", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/x-www-form-urlencoded",
-    },
-  })
-    .then((response) => response.json())
-    .then((data) => {
-      console.log("Response:", data);
-      window.location.href = `paid.php?pickup=${data.pickup_number}`;
-    })
-    .catch((error) => {
-      console.log("Error:", error);
-    });
-});
+// document.querySelector("#bestel").addEventListener("click", function () {
+//   console.log("Bestel clicked");
+//   fetch("update_order_status.php", {
+//     method: "POST",
+//     headers: {
+//       "Content-Type": "application/x-www-form-urlencoded",
+//     },
+//   })
+//     .then((response) => response.json())
+//     .then((data) => {
+//       console.log("Response:", data);
+//       window.location.href = `paid.php?pickup=${data.pickup_number}`;
+//     })
+//     .catch((error) => {
+//       console.log("Error:", error);
+//     });
+// });

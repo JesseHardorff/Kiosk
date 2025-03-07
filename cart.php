@@ -94,7 +94,6 @@ foreach ($rows as $row) {
             </div>
         <?php } ?>
     </div>
-
     <div id="footer">
         <a class="verlaat" href="start.php">exit</a>
         <a id="menu" href="menu.php">back to menu</a>

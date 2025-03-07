@@ -41,9 +41,9 @@
         <div class="english">
             <img src="assets/img/UK1.webp" alt="Logo" class="choose-language">
         </div>
-        <div class="dutch">
+        <!-- <div class="dutch">
             <img src="assets/img/NL1.png" alt="Logo" class="choose-language">
-        </div>
+        </div> -->
 
 
 
