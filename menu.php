@@ -34,11 +34,11 @@ $cat1 = isset($_GET['cat']) ? (int) $_GET['cat'] : 1; // 1 is default category
                         $sqli_prepare->bind_result($category_id, $category_name, $category_description);
                         while ($sqli_prepare->fetch()) { // WHILE START            
                             ?>
-                            <li class="menu-category">
-                                <a href="menu.php?cat=<?= $category_id ?>">
+                            <li class="menu-category" id="category<?= $category_id ?>" onclick="changeCategory(<?= $category_id ?>)">
+                                <!-- <a href="menu.php?cat=<?= $category_id ?>" id="cat-change-cat<?= $category_id ?>"> -->
                                     <img src="assets/img/<?= $category_description ?>1.webp" alt="menu" class="category-icon">
                                     <p class="category-title"><?= $category_name ?></p>
-                                </a>
+                                <!-- </a> -->
                             </li>
                             <?php
                         }
@@ -53,34 +53,31 @@ $cat1 = isset($_GET['cat']) ? (int) $_GET['cat'] : 1; // 1 is default category
             <?php
             // First prepare the products query
             $sqli_prepare = $conn->prepare("
-            SELECT p.product_id, p.image_id, p.name, p.price, i.filename 
+            SELECT p.product_id, p.image_id, p.name, p.price, i.filename, p.category_id 
             FROM products p
             JOIN images i ON p.image_id = i.image_id
-            WHERE p.category_id = ?
         ");
 
             if ($sqli_prepare === false) {
-                echo mysqli_error($conn);
+            echo mysqli_error($conn);
             } else {
-                $sqli_prepare->bind_param("i", $cat1);
-                if ($sqli_prepare->execute()) {
-                    $sqli_prepare->store_result();
-                    $sqli_prepare->bind_result($product_id, $image_id, $product_name, $product_price, $image_filename);
-                    while ($sqli_prepare->fetch()) {
+            if ($sqli_prepare->execute()) {
+                $sqli_prepare->store_result();
+                $sqli_prepare->bind_result($product_id, $image_id, $product_name, $product_price, $image_filename, $category_id);
+                while ($sqli_prepare->fetch()) {
 
-                        ?>
-                        <div class="item-card" data-product-id="<?= $product_id ?>">
-
-                            <img src="assets/img/<?= $image_filename ?>" alt="menu" class="item-image">
-                            <div class="item-info">
-                                <p class="item-title"><?= $product_name ?></p>
-                                <p class="item-price">€<?= $product_price ?></p>
-                            </div>
-                        </div>
-                        <?php
-                    }
+                ?>
+                <div class="item-card inactive category<?= $category_id ?>" id="item-card<?= $product_id ?>" data-product-id="<?= $product_id ?>">
+                    <img src="assets/img/<?= $image_filename ?>" alt="menu" class="item-image">
+                    <div class="item-info">
+                    <p class="item-title"><?= $product_name ?></p>
+                    <p class="item-price">€<?= $product_price ?></p>
+                    </div>
+                </div>
+                <?php
                 }
-                $sqli_prepare->close();
+            }
+            $sqli_prepare->close();
             }
             ?>
         </div>
@@ -105,7 +102,12 @@ $cat1 = isset($_GET['cat']) ? (int) $_GET['cat'] : 1; // 1 is default category
 </main>
 </body>
 <script src="assets/js/menu.js"></script>
+<script src="assets/js/category.js"></script>
 <script src="assets/js/cart.js"></script>
-
-
+<script>
+    // Set the initial active category
+    document.addEventListener('DOMContentLoaded', function() {
+        changeCategory(<?= $cat1 ?>);
+    });
+</script>
 </html>
