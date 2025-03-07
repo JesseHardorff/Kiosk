@@ -36,7 +36,7 @@ $cat1 = isset($_GET['cat']) ? (int) $_GET['cat'] : 1; // 1 is default category
                             ?>
                             <li class="menu-category">
                                 <a href="menu.php?cat=<?= $category_id ?>">
-                                    <img src="assets/img/breakfast1.webp" alt="menu" class="category-icon">
+                                    <img src="assets/img/<?= $category_description ?>2.webp" alt="menu" class="category-icon">
                                     <p class="category-title"><?= $category_name ?></p>
                                 </a>
                             </li>
