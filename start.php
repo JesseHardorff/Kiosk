@@ -34,20 +34,6 @@
             <span>TAKE OUT</span>
         </div>
     </div>
-    <div class="language-text">
-        Choose Your Language
-    </div>
-    <div class="language-container">
-        <div class="english">
-            <img src="assets/img/UK1.webp" alt="Logo" class="choose-language">
-        </div>
-        <!-- <div class="dutch">
-            <img src="assets/img/NL1.png" alt="Logo" class="choose-language">
-        </div> -->
-
-
-
-
 </body>
 
 <script src="assets/js/choose-press.js"></script>
