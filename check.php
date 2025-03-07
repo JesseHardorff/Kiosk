@@ -65,9 +65,10 @@ foreach ($rows as $row) {
         </div>
         <a id="verlaat" href="start.php">exit</a>
         <a id="menu" href="cart.php">change order</a>
-        <a id="bestel" href="paid.php">pay</a>
+        <a id="bestel">pay</a>
     </div>
 </body>
+
 <script src="assets/js/cart.js"></script>
 <script>
     document.addEventListener('DOMContentLoaded', function () {
