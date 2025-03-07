@@ -1,23 +1,22 @@
 <?php
-include ('assets/core/connect.php');
-// random getal van 1 tot 29(alle producten) voor de de reclame image die om 5 sec verandert
+include('assets/core/connect.php');
 
+// Genereer een willekeurig product ID tussen 1 en 29 voor de reclame afbeelding
 $randomProductId = rand(1, 29);
 
-// pak de image_id en andere info die ik bij het product wil laten zien van dit getal in de products table
+// Haal product informatie op uit de database
 $sql = "SELECT image_id, name, price, kcal FROM products WHERE product_id = $randomProductId";
 $result = $conn->query($sql);
 $product = $result->fetch_assoc();
 
-// pak de filename van deze image_id in de images table
+// Haal de bestandsnaam van de afbeelding op
 $sql = "SELECT filename FROM images WHERE image_id = " . $product['image_id'];
 $result = $conn->query($sql);
 $filename = $result->fetch_assoc()['filename'];
 
-echo "assets/img/" . $filename . "||" . 
-     $product['name'] . "||" . 
-     $product['price'] . "||" . 
+// Stuur alle product informatie terug gescheiden door ||
+echo "assets/img/" . $filename . "||" .
+     $product['name'] . "||" .
+     $product['price'] . "||" .
      $product['kcal'];
-     
-
 ?>
