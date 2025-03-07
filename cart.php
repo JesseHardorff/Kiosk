@@ -97,7 +97,7 @@ foreach ($rows as $row) {
     <div id="footer">
         <a class="verlaat" href="start.php">exit</a>
         <a id="menu" href="menu.php">back to menu</a>
-        <a id="bestel" href="check.php">order</a>
+        <a id="bestel2" href="check.php">order</a>
     </div>
 </body>
 <script src="assets/js/cart.js"></script>
