@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 07, 2025 at 11:14 AM
+-- Generation Time: Mar 11, 2025 at 01:51 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -106,19 +106,6 @@ CREATE TABLE `orders` (
   `datetime` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
---
--- Dumping data for table `orders`
---
-
-INSERT INTO `orders` (`order_id`, `order_status_id`, `pickup_number`, `price`, `datetime`) VALUES
-(1, 1, 0, 0.00, '0000-00-00 00:00:00'),
-(2, 1, 0, 0.00, '0000-00-00 00:00:00'),
-(3, 2, 2, 0.00, '2025-03-07 10:31:52'),
-(4, 2, 3, 7.30, '2025-03-07 10:36:53'),
-(5, 1, 0, 0.00, '0000-00-00 00:00:00'),
-(6, 2, 5, 12.00, '2025-03-07 10:40:54'),
-(7, 2, 6, 22.60, '2025-03-07 11:14:03');
-
 -- --------------------------------------------------------
 
 --
@@ -131,27 +118,6 @@ CREATE TABLE `order_product` (
   `price` decimal(10,2) NOT NULL,
   `quantity` int(11) DEFAULT 1
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Dumping data for table `order_product`
---
-
-INSERT INTO `order_product` (`order_id`, `product_id`, `price`, `quantity`) VALUES
-(1, 7, 3.50, 2),
-(1, 8, 3.00, 1),
-(2, 1, 4.50, 2),
-(2, 2, 3.50, 1),
-(2, 5, 5.00, 11),
-(4, 1, 4.50, 1),
-(4, 3, 2.80, 1),
-(6, 2, 3.50, 2),
-(6, 5, 5.00, 1),
-(7, 2, 2.80, 1),
-(7, 5, 5.00, 1),
-(7, 4, 6.00, 1),
-(7, 14, 3.50, 1),
-(7, 28, 3.80, 1),
-(7, 27, 1.50, 1);
 
 -- --------------------------------------------------------
 
